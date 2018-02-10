@@ -1,0 +1,8 @@
+Symlinking /home/ravi/robotics/catkin_ws1/devel/./setup.zsh
+Symlinking /home/ravi/robotics/catkin_ws1/devel/./setup.sh
+Symlinking /home/ravi/robotics/catkin_ws1/devel/./_setup_util.py
+Symlinking /home/ravi/robotics/catkin_ws1/devel/./setup.bash
+Symlinking /home/ravi/robotics/catkin_ws1/devel/./env.sh
+Symlinking /home/ravi/robotics/catkin_ws1/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/ravi/robotics/catkin_ws1/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/ravi/robotics/catkin_ws1/devel/lib/pkgconfig/catkin_tools_prebuild.pc
