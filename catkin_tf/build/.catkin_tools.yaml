@@ -1,0 +1,6 @@
+devel_space: /home/ravi/robotics/catkin_tf/devel
+install: false
+install_space: /home/ravi/robotics/catkin_tf/install
+profile: default
+source_space: /home/ravi/robotics/catkin_tf/src
+workspace: /home/ravi/robotics/catkin_tf

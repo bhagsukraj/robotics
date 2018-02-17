@@ -1,0 +1,1 @@
+/home/ravi/robotics/catkin_talk_listen/devel/.private/catkin_tools_prebuild/env.sh

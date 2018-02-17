@@ -2,4 +2,5 @@ $ mkdir -p catkin_ws/src -- create a new workspace folder with src file
 $ catkin init -- catkin initialize the workspace. catkin commands are context aware
 $ catkin build -- builds catkin workspace
 $ roscore -- Starts master + parameter server
-$ rosnode info /rosout -- 
+$ rosnode info /rosout --
+$ rosdep -- used to install system dependencies

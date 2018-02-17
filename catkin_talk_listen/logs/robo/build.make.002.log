@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target listener[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[ 40%] Built target talker
+[ 40%] Built target std_msgs_generate_messages_lisp
+[ 40%] Built target std_msgs_generate_messages_py
+[ 40%] Built target std_msgs_generate_messages_eus
+[ 60%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o[0m
+[ 60%] Built target robo_generate_messages_cpp
+[ 60%] Built target robo_generate_messages_nodejs
+[ 60%] Built target robo_generate_messages_lisp
+[ 80%] Built target robo_generate_messages_eus
+[ 80%] Built target robo_generate_messages_py
+[ 80%] Built target robo_generate_messages
+[01m[K/home/ravi/robotics/catkin_talk_listen/src/robo/src/listener.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ravi/robotics/catkin_talk_listen/src/robo/src/listener.cpp:10:8:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kint[m[K’
+   ros::int(argc , argv , "listener");
+[01;32m[K        ^[m[K
+[01m[K/home/ravi/robotics/catkin_talk_listen/src/robo/src/listener.cpp:14:3:[m[K [01;31m[Kerror: [m[K‘[01m[KSubsciber[m[K’ is not a member of ‘[01m[Kros[m[K’
+   ros::Subsciber sub = n.subscribe("chatter", 1000 , chatterCallback);
+[01;32m[K   ^[m[K
+CMakeFiles/listener.dir/build.make:62: recipe for target 'CMakeFiles/listener.dir/src/listener.cpp.o' failed
+make[2]: *** [CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/listener.dir/all' failed
+make[1]: *** [CMakeFiles/listener.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

@@ -1,0 +1,1 @@
+/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/roseus/ros/robo/manifest.l

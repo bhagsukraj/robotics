@@ -111,17 +111,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -426,6 +426,19 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named vision_node
+
+# Build rule for target.
+vision_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vision_node
+.PHONY : vision_node
+
+# fast build rule for target.
+vision_node/fast:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/build
+.PHONY : vision_node/fast
+
+#=============================================================================
 # Target rules for targets named gtest
 
 # Build rule for target.
@@ -451,6 +464,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/vision_node.o: src/vision_node.cpp.o
+
+.PHONY : src/vision_node.o
+
+# target to build an object file
+src/vision_node.cpp.o:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/vision_node.cpp.o
+.PHONY : src/vision_node.cpp.o
+
+src/vision_node.i: src/vision_node.cpp.i
+
+.PHONY : src/vision_node.i
+
+# target to preprocess a source file
+src/vision_node.cpp.i:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/vision_node.cpp.i
+.PHONY : src/vision_node.cpp.i
+
+src/vision_node.s: src/vision_node.cpp.s
+
+.PHONY : src/vision_node.s
+
+# target to generate assembly for a file
+src/vision_node.cpp.s:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/vision_node.cpp.s
+.PHONY : src/vision_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +502,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... clean_test_results"
@@ -482,10 +523,13 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... vision_node"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/vision_node.o"
+	@echo "... src/vision_node.i"
+	@echo "... src/vision_node.s"
 .PHONY : help
 
 

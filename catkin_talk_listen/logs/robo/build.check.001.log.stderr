@@ -1,0 +1,30 @@
+[33m[1mCMake Warning[0m at /home/ravi/robotics/catkin_talk_listen/build/robo/cmake/robo-genmsg.cmake:3 (message):
+  Invoking generate_messages() without having added any message or service
+  file before.
+
+  You should either add add_message_files() and/or add_service_files() calls
+  or remove the invocation of generate_messages().
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:72 (generate_messages)
+
+
+[31m[1mCMake Error[0m at /home/ravi/robotics/catkin_talk_listen/src/robo/CMakeLists.txt:133 (add_dependencies):
+  Cannot add target-level dependencies to non-existent target "talker".
+
+  The add_dependencies works for top-level logical targets created by the
+  add_executable, add_library, or add_custom_target commands.  If you want to
+  add file-level dependencies see the DEPENDS option of the add_custom_target
+  and add_custom_command commands.
+
+
+[31m[1mCMake Error[0m at /home/ravi/robotics/catkin_talk_listen/src/robo/CMakeLists.txt:134 (add_dependencies):
+  Cannot add target-level dependencies to non-existent target "listener".
+
+  The add_dependencies works for top-level logical targets created by the
+  add_executable, add_library, or add_custom_target commands.  If you want to
+  add file-level dependencies see the DEPENDS option of the add_custom_target
+  and add_custom_command commands.
+
+
+make: *** [cmake_check_build_system] Error 1

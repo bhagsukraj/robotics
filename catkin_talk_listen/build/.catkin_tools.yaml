@@ -1,0 +1,6 @@
+devel_space: /home/ravi/robotics/catkin_talk_listen/devel
+install: false
+install_space: /home/ravi/robotics/catkin_talk_listen/install
+profile: default
+source_space: /home/ravi/robotics/catkin_talk_listen/src
+workspace: /home/ravi/robotics/catkin_talk_listen

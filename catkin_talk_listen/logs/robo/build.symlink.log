@@ -1,0 +1,9 @@
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/roseus/ros/robo/manifest.l, /home/ravi/robotics/catkin_talk_listen/devel/share/roseus/ros/robo/manifest.l)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/robo/cmake/roboConfig.cmake, /home/ravi/robotics/catkin_talk_listen/devel/share/robo/cmake/roboConfig.cmake)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/robo/cmake/robo-msg-paths.cmake, /home/ravi/robotics/catkin_talk_listen/devel/share/robo/cmake/robo-msg-paths.cmake)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/robo/cmake/robo-msg-extras.cmake, /home/ravi/robotics/catkin_talk_listen/devel/share/robo/cmake/robo-msg-extras.cmake)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/share/robo/cmake/roboConfig-version.cmake, /home/ravi/robotics/catkin_talk_listen/devel/share/robo/cmake/roboConfig-version.cmake)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/lib/pkgconfig/robo.pc, /home/ravi/robotics/catkin_talk_listen/devel/lib/pkgconfig/robo.pc)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/lib/python2.7/dist-packages/robo/__init__.py, /home/ravi/robotics/catkin_talk_listen/devel/lib/python2.7/dist-packages/robo/__init__.py)
+Linked: (/home/ravi/robotics/catkin_talk_listen/devel/.private/robo/lib/robo/talker, /home/ravi/robotics/catkin_talk_listen/devel/lib/robo/talker)
+Symlinking /home/ravi/robotics/catkin_talk_listen/devel/lib/robo/listener

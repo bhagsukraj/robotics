@@ -700,6 +700,43 @@ clean: CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/vision_node.dir
+
+# All Build rule for target.
+CMakeFiles/vision_node.dir/all:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/depend
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ravi/robotics/catkin_ws1/build/robo/CMakeFiles --progress-num=5,6 "Built target vision_node"
+.PHONY : CMakeFiles/vision_node.dir/all
+
+# Include target in all.
+all: CMakeFiles/vision_node.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/vision_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ravi/robotics/catkin_ws1/build/robo/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/vision_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ravi/robotics/catkin_ws1/build/robo/CMakeFiles 0
+.PHONY : CMakeFiles/vision_node.dir/rule
+
+# Convenience name for target.
+vision_node: CMakeFiles/vision_node.dir/rule
+
+.PHONY : vision_node
+
+# clean rule for target.
+CMakeFiles/vision_node.dir/clean:
+	$(MAKE) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/clean
+.PHONY : CMakeFiles/vision_node.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/vision_node.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory gtest
 
 # Convenience name for "all" pass in the directory.
