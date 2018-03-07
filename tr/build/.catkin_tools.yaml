@@ -1,0 +1,6 @@
+devel_space: /home/ravi/robotics/tr/devel
+install: false
+install_space: /home/ravi/robotics/tr/install
+profile: default
+source_space: /home/ravi/robotics/tr/src
+workspace: /home/ravi/robotics/tr

@@ -1,4 +1,0 @@
-pkg1
-/home/ravi/robotics/catkin_ws2/devel/.private/pkg1/share/pkg1/cmake/pkg1Config-version.cmake /home/ravi/robotics/catkin_ws2/devel/share/pkg1/cmake/pkg1Config-version.cmake
-/home/ravi/robotics/catkin_ws2/devel/.private/pkg1/share/pkg1/cmake/pkg1Config.cmake /home/ravi/robotics/catkin_ws2/devel/share/pkg1/cmake/pkg1Config.cmake
-/home/ravi/robotics/catkin_ws2/devel/.private/pkg1/lib/pkgconfig/pkg1.pc /home/ravi/robotics/catkin_ws2/devel/lib/pkgconfig/pkg1.pc

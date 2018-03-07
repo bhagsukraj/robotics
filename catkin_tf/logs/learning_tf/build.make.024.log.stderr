@@ -1,6 +1,0 @@
-CMakeFiles/turtle_tf_broadcaster.dir/src/turtle_tf_broadcaster.cpp.o: In function `poseCallback(boost::shared_ptr<turtlesim::Pose_<std::allocator<void> > const> const&)':
-turtle_tf_broadcaster.cpp:(.text+0x3a): undefined reference to `tf::TransformBroadcaster::TransformBroadcaster()'
-collect2: error: ld returned 1 exit status
-make[2]: *** [/home/ravi/robotics/catkin_tf/devel/.private/learning_tf/lib/learning_tf/turtle_tf_broadcaster] Error 1
-make[1]: *** [CMakeFiles/turtle_tf_broadcaster.dir/all] Error 2
-make: *** [all] Error 2

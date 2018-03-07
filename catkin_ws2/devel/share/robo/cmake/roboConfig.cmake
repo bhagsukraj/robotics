@@ -1,1 +1,0 @@
-/home/ravi/robotics/catkin_ws2/devel/.private/robo/share/robo/cmake/roboConfig.cmake

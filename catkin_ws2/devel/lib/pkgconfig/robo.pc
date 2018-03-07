@@ -1,1 +1,0 @@
-/home/ravi/robotics/catkin_ws2/devel/.private/robo/lib/pkgconfig/robo.pc
