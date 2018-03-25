@@ -111,17 +111,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -426,6 +426,19 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named pkg1_node
+
+# Build rule for target.
+pkg1_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_node
+.PHONY : pkg1_node
+
+# fast build rule for target.
+pkg1_node/fast:
+	$(MAKE) -f CMakeFiles/pkg1_node.dir/build.make CMakeFiles/pkg1_node.dir/build
+.PHONY : pkg1_node/fast
+
+#=============================================================================
 # Target rules for targets named gtest
 
 # Build rule for target.
@@ -451,6 +464,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/helloworld.o: src/helloworld.cpp.o
+
+.PHONY : src/helloworld.o
+
+# target to build an object file
+src/helloworld.cpp.o:
+	$(MAKE) -f CMakeFiles/pkg1_node.dir/build.make CMakeFiles/pkg1_node.dir/src/helloworld.cpp.o
+.PHONY : src/helloworld.cpp.o
+
+src/helloworld.i: src/helloworld.cpp.i
+
+.PHONY : src/helloworld.i
+
+# target to preprocess a source file
+src/helloworld.cpp.i:
+	$(MAKE) -f CMakeFiles/pkg1_node.dir/build.make CMakeFiles/pkg1_node.dir/src/helloworld.cpp.i
+.PHONY : src/helloworld.cpp.i
+
+src/helloworld.s: src/helloworld.cpp.s
+
+.PHONY : src/helloworld.s
+
+# target to generate assembly for a file
+src/helloworld.cpp.s:
+	$(MAKE) -f CMakeFiles/pkg1_node.dir/build.make CMakeFiles/pkg1_node.dir/src/helloworld.cpp.s
+.PHONY : src/helloworld.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,6 +502,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... clean_test_results"
@@ -482,10 +523,13 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... pkg1_node"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/helloworld.o"
+	@echo "... src/helloworld.i"
+	@echo "... src/helloworld.s"
 .PHONY : help
 
 
