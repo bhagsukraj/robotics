@@ -1,0 +1,6 @@
+devel_space: /home/ravi/robotics/catkin_ws3/devel
+install: false
+install_space: /home/ravi/robotics/catkin_ws3/install
+profile: default
+source_space: /home/ravi/robotics/catkin_ws3/src
+workspace: /home/ravi/robotics/catkin_ws3
