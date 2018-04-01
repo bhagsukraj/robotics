@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target pkg1_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/pkg1_node.dir/src/helloworld.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/ravi/robotics/catkin_ws/devel/.private/pkg1/lib/pkg1/pkg1_node[0m
-[100%] Built target pkg1_node
