@@ -1,0 +1,1 @@
+/home/ravi/robotics/catkin_ws/devel/.private/pkg1/share/common-lisp/ros/pkg1/msg/pkg1-msg.asd

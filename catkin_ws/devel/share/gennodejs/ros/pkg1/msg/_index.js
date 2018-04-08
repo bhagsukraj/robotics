@@ -1,0 +1,1 @@
+/home/ravi/robotics/catkin_ws/devel/.private/pkg1/share/gennodejs/ros/pkg1/msg/_index.js

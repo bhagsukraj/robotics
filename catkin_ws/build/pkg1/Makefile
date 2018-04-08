@@ -78,6 +78,39 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,39 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +164,110 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named pkg1_generate_messages_py
+
+# Build rule for target.
+pkg1_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages_py
+.PHONY : pkg1_generate_messages_py
+
+# fast build rule for target.
+pkg1_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages_py.dir/build.make CMakeFiles/pkg1_generate_messages_py.dir/build
+.PHONY : pkg1_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_generate_messages_nodejs
+
+# Build rule for target.
+pkg1_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages_nodejs
+.PHONY : pkg1_generate_messages_nodejs
+
+# fast build rule for target.
+pkg1_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages_nodejs.dir/build.make CMakeFiles/pkg1_generate_messages_nodejs.dir/build
+.PHONY : pkg1_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_genlisp
+
+# Build rule for target.
+pkg1_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_genlisp
+.PHONY : pkg1_genlisp
+
+# fast build rule for target.
+pkg1_genlisp/fast:
+	$(MAKE) -f CMakeFiles/pkg1_genlisp.dir/build.make CMakeFiles/pkg1_genlisp.dir/build
+.PHONY : pkg1_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_generate_messages_lisp
+
+# Build rule for target.
+pkg1_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages_lisp
+.PHONY : pkg1_generate_messages_lisp
+
+# fast build rule for target.
+pkg1_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages_lisp.dir/build.make CMakeFiles/pkg1_generate_messages_lisp.dir/build
+.PHONY : pkg1_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_gennodejs
+
+# Build rule for target.
+pkg1_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_gennodejs
+.PHONY : pkg1_gennodejs
+
+# fast build rule for target.
+pkg1_gennodejs/fast:
+	$(MAKE) -f CMakeFiles/pkg1_gennodejs.dir/build.make CMakeFiles/pkg1_gennodejs.dir/build
+.PHONY : pkg1_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_geneus
+
+# Build rule for target.
+pkg1_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_geneus
+.PHONY : pkg1_geneus
+
+# fast build rule for target.
+pkg1_geneus/fast:
+	$(MAKE) -f CMakeFiles/pkg1_geneus.dir/build.make CMakeFiles/pkg1_geneus.dir/build
+.PHONY : pkg1_geneus/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_gencpp
+
+# Build rule for target.
+pkg1_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_gencpp
+.PHONY : pkg1_gencpp
+
+# fast build rule for target.
+pkg1_gencpp/fast:
+	$(MAKE) -f CMakeFiles/pkg1_gencpp.dir/build.make CMakeFiles/pkg1_gencpp.dir/build
+.PHONY : pkg1_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_generate_messages_cpp
+
+# Build rule for target.
+pkg1_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages_cpp
+.PHONY : pkg1_generate_messages_cpp
+
+# fast build rule for target.
+pkg1_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages_cpp.dir/build.make CMakeFiles/pkg1_generate_messages_cpp.dir/build
+.PHONY : pkg1_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -270,6 +374,19 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named pkg1_generate_messages
+
+# Build rule for target.
+pkg1_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages
+.PHONY : pkg1_generate_messages
+
+# fast build rule for target.
+pkg1_generate_messages/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages.dir/build.make CMakeFiles/pkg1_generate_messages.dir/build
+.PHONY : pkg1_generate_messages/fast
+
+#=============================================================================
 # Target rules for targets named doxygen
 
 # Build rule for target.
@@ -294,6 +411,32 @@ run_tests: cmake_check_build_system
 run_tests/fast:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_genpy
+
+# Build rule for target.
+pkg1_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_genpy
+.PHONY : pkg1_genpy
+
+# fast build rule for target.
+pkg1_genpy/fast:
+	$(MAKE) -f CMakeFiles/pkg1_genpy.dir/build.make CMakeFiles/pkg1_genpy.dir/build
+.PHONY : pkg1_genpy/fast
+
+#=============================================================================
+# Target rules for targets named pkg1_generate_messages_eus
+
+# Build rule for target.
+pkg1_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg1_generate_messages_eus
+.PHONY : pkg1_generate_messages_eus
+
+# fast build rule for target.
+pkg1_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/pkg1_generate_messages_eus.dir/build.make CMakeFiles/pkg1_generate_messages_eus.dir/build
+.PHONY : pkg1_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -413,6 +556,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named _pkg1_generate_messages_check_deps_Num
+
+# Build rule for target.
+_pkg1_generate_messages_check_deps_Num: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pkg1_generate_messages_check_deps_Num
+.PHONY : _pkg1_generate_messages_check_deps_Num
+
+# fast build rule for target.
+_pkg1_generate_messages_check_deps_Num/fast:
+	$(MAKE) -f CMakeFiles/_pkg1_generate_messages_check_deps_Num.dir/build.make CMakeFiles/_pkg1_generate_messages_check_deps_Num.dir/build
+.PHONY : _pkg1_generate_messages_check_deps_Num/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -459,9 +615,18 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... pkg1_generate_messages_py"
+	@echo "... pkg1_generate_messages_nodejs"
+	@echo "... pkg1_genlisp"
+	@echo "... pkg1_generate_messages_lisp"
+	@echo "... rebuild_cache"
+	@echo "... pkg1_gennodejs"
+	@echo "... pkg1_geneus"
+	@echo "... pkg1_gencpp"
+	@echo "... pkg1_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... clean_test_results"
@@ -470,8 +635,12 @@ help:
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... download_extra_data"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... pkg1_generate_messages"
 	@echo "... doxygen"
 	@echo "... run_tests"
+	@echo "... pkg1_genpy"
+	@echo "... pkg1_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -481,9 +650,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... _pkg1_generate_messages_check_deps_Num"
 	@echo "... std_msgs_generate_messages_eus"
-	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... gtest"
 	@echo "... gtest_main"
 .PHONY : help

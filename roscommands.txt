@@ -9,3 +9,4 @@ $ roscore -- Starts master + parameter server
 $ rosnode info /rosout --
 $ rosdep -- used to install system dependencies
 $ rospack find roscpp -- finds the dir path roscpp
+$ rosrun turtlesim turtlesim_node - run a node within a package
